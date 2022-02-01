@@ -77,12 +77,10 @@ module.exports = {
   },
   plugins: analyzeBundle ? [new BundleAnalyzerPlugin()] : [
     new HTMLWebpackPlugin({
-      favicon: 'favicon.ico',
-      title: 'Doodle3D Slicer',
-      template: require('html-webpack-template'),
-      inject: false,
+      template: './public/index.html',
+      inject: true,
       hash: !devMode,
-      appMountId: 'app'
+     
     }),
   ],
   devtool: devMode ? 'source-map' : false,
